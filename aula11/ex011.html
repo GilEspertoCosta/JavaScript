@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+            background-color: lightgreen;
+            padding: 0%;
+            margin: 0%;
+        }
+        h1{
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(3, 36, 3);
+            color: white;
+            margin-top: 0%;
+        }
+        input#txtnac{
+            font: normal 18pt Arial;
+            background-color: lightgrey;
+            width: 150px;
+
+        }
+
+        input#butão{
+            font: normal 18pt Arial;
+            background-color: lightgrey;
+            width: 100px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+
+    Qual o país onde nasceu?<input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="clicar()" id="butão">
+    <div id="res">Nacionalidade</div>
+
+    <script>
+        function clicar(){
+            var txtnac = document.getElementById("txtnac")
+            var res = document.getElementById("res")
+            var pais = (txtnac.value)
+            res.innerHTML =`<p>Você nasceu em <strong>${pais}!</strong></p>`
+                if (pais == 'Portugal' || pais == 'portugal') {
+                    res.innerHTML += `<p>Você é <strong>Português!</strong></p>`}
+                else {
+                    res.innerHTML += `<p>Você é <strong>estrangeiro!</strong></p>`
+                }
+                
+            
+            
+    }
+    </script>
+    
+</body>
+</html>
